@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulár a validácia – precvičenie</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Formulár a validácia</h1>
+    <p>Rozpracované cvičenie: otvor ZADANIE.md a doplň TODO v script.js.</p>
+    <form id="point-form" novalidate>
+<label for="point-name">Názov</label><input id="point-name" name="name">
+<label for="point-latitude">Zemepisná šírka</label><input id="point-latitude" name="latitude" type="number" step="any">
+<label for="point-longitude">Zemepisná dĺžka</label><input id="point-longitude" name="longitude" type="number" step="any">
+<button type="submit">Pridať bod</button></form>
+<p id="status" role="status"></p><ul id="points"></ul>
+  </main>
+</body>
+</html>

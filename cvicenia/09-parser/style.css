@@ -1,0 +1,8 @@
+body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+button, input, select { font: inherit; padding: .4rem; margin: .25rem; }
+label { display: block; }
+article, fieldset { border: 1px solid #ccc; padding: 1rem; margin: .5rem 0; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid #1769aa; outline-offset: 3px; }
+[hidden] { display: none !important; }
+/* TODO: Podľa zadania doplň vzhľad, triedy a responzivitu. */

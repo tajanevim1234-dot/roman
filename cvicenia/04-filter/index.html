@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filter cez data atribúty – precvičenie</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Filter cez data atribúty</h1>
+    <p>Rozpracované cvičenie: otvor ZADANIE.md a doplň TODO v script.js.</p>
+    <div id="filters">
+<button data-filter="all" aria-pressed="true">Všetko</button>
+<button data-filter="lecture" aria-pressed="false">Prednášky</button>
+<button data-filter="exercise" aria-pressed="false">Cvičenia</button>
+<button data-filter="sport" aria-pressed="false">Šport</button></div>
+<p id="filter-status" role="status"></p>
+<div class="cards"><article class="lesson" data-type="lecture">Matematika</article>
+<article class="lesson" data-type="lecture">Webové technológie</article>
+<article class="lesson" data-type="exercise">Programovanie</article>
+<article class="lesson" data-type="sport">Telesná kultúra</article></div>
+  </main>
+</body>
+</html>

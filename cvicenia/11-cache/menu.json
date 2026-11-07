@@ -1,0 +1,15 @@
+[
+  {
+    "day": 1,
+    "date": null,
+    "items": [
+      {
+        "type": "Polievka",
+        "name": "Paradajková polievka",
+        "price": "2,50 €",
+        "weight": "0,33 l",
+        "allergens": "9"
+      }
+    ]
+  }
+]

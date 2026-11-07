@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Paradajková polievka",
+    "day": 1,
+    "type": "soup",
+    "price": 2.5
+  },
+  {
+    "id": 2,
+    "name": "Kurací rezeň",
+    "day": 1,
+    "type": "main",
+    "price": 6.9
+  },
+  {
+    "id": 3,
+    "name": "Zeleninové rizoto",
+    "day": 2,
+    "type": "main",
+    "price": 5.2
+  },
+  {
+    "id": 4,
+    "name": "Cesnaková polievka",
+    "day": 2,
+    "type": "soup",
+    "price": 2.8
+  }
+]
