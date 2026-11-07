@@ -6,3 +6,33 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 :focus-visible { outline: 3px solid #1769aa; outline-offset: 3px; }
 [hidden] { display: none !important; }
 /* TODO: Podľa zadania doplň vzhľad, triedy a responzivitu. */
+.name{
+    background-color: aquamarine;
+    padding: 8px;
+    border-radius: 8px;
+}
+.la{
+    background-color: red   ;
+    padding: 8px;
+    border-radius: 8px;
+}
+.lo{
+    background-color: rgb(248, 244, 1)   ;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#results{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#results article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 8px;
+}
