@@ -1,4 +1,53 @@
-<!doctype html>
-<html lang="sk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skúšobný zápočet</title><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
-<body><main><h1>Obedové menu</h1><!-- TODO: Doplň celé rozhranie podľa zadania. --></main></body></html>
+﻿<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obedové menu – skúšobný zápočet</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- defer spustí skript až po spracovaní HTML. -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Cvičenie 15 · Súhrnné precvičenie</p>
+    <h1>Obedové menu</h1>
+    <p>Vyber si deň, prezri ponuku alebo pridaj vlastné jedlo.</p>
+    <button id="load" type="button">Načítať menu</button>
+    <p class="hint">Načítanie zo súboru nahradí aktuálne jedlá vrátane vlastných úprav.</p>
+    <!-- Stav operácie je oddelený od upozornení na ukladanie. -->
+    <p id="status" role="status"></p>
+    <p id="storage-status" role="status"></p>
+    <fieldset>
+      <legend>Filtrovanie ponuky</legend>
+      <label for="day">Deň</label>
+      <select id="day">
+        <option value="1">Pondelok</option>
+        <option value="2">Utorok</option>
+      </select>
+      <label class="checkbox" for="only-soups"><input id="only-soups" type="checkbox"> Len polievky</label>
+    </fieldset>
+    <section aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Ponuka jedál</h2>
+      <p id="count" role="status"></p>
+      <div id="results" class="cards"></div>
+    </section>
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading">Pridať jedlo</h2>
+      <!-- HTML kontroluje základné obmedzenia, JavaScript overuje aj medzery a dáta. -->
+      <form id="meal-form">
+        <label for="meal-name">Názov jedla</label>
+        <input id="meal-name" name="name" required>
+        <label for="meal-day">Deň ponuky</label>
+        <select id="meal-day" name="day"><option value="1">Pondelok</option><option value="2">Utorok</option></select>
+        <label for="meal-type">Typ jedla</label>
+        <select id="meal-type" name="type"><option value="soup">Polievka</option><option value="main">Hlavné jedlo</option></select>
+        <label for="meal-price">Cena v eurách</label>
+        <input id="meal-price" name="price" type="number" min="0.01" step="0.01" required>
+        <button type="submit">Pridať jedlo</button>
+      </form>
+    </section>
+    <noscript>Na načítanie a úpravu menu potrebuješ zapnutý JavaScript.</noscript>
+  </main>
+</body>
+</html>

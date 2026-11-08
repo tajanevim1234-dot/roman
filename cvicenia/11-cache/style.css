@@ -1,8 +1,82 @@
-body { font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
-button, input, select { font: inherit; padding: .4rem; margin: .25rem; }
-label { display: block; }
-article, fieldset { border: 1px solid #ccc; padding: 1rem; margin: .5rem 0; }
+﻿/* border-box započíta padding aj okraj do šírky prvku. */
+* { box-sizing: border-box; }
+body {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #f4f7fa;
+  color: #203044;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+h1 { line-height: 1.2; font-size: clamp(1.8rem, 5vw, 2.6rem); }
+h2 { margin-top: 1.8rem; }
+h3 { margin-top: 0; }
+a { color: #155b90; }
+.eyebrow { color: #155b90; font-weight: 700; }
+.hint, footer { color: #526173; }
+/* Flex zalomí ovládacie prvky, ak na úzkej obrazovke nemajú miesto. */
+nav, .actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+nav a { padding: .55rem .9rem; border-radius: .4rem; }
+nav a[aria-current="page"] { background: #155b90; color: white; }
+button, input, select { font: inherit; }
+button {
+  padding: .6rem 1rem;
+  border: 1px solid #155b90;
+  border-radius: .4rem;
+  background: #155b90;
+  color: white;
+  cursor: pointer;
+}
+button:hover { background: #10466f; }
+button:disabled { opacity: .6; cursor: wait; }
+label { display: block; margin-top: .7rem; font-weight: 600; }
+input:not([type="checkbox"]), select {
+  display: block;
+  width: 100%;
+  max-width: 30rem;
+  padding: .6rem;
+  border: 1px solid #8393a4;
+  border-radius: .35rem;
+  background: white;
+  color: inherit;
+}
+.checkbox { display: flex; align-items: center; gap: .5rem; }
+input[type="checkbox"] { width: 1.15rem; height: 1.15rem; }
+form button { margin-top: 1rem; }
+article, fieldset, form, pre {
+  min-width: 0;
+  margin: 1rem 0;
+  padding: 1.2rem;
+  border: 1px solid #d2dce6;
+  border-radius: .6rem;
+  background: white;
+}
+form fieldset { margin: 0; }
+legend { font-weight: 700; padding: 0 .4rem; }
+/* minmax(0, 1fr) zabráni tomu, aby dlhý názov rozšíril stĺpec. */
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.cards article { margin: 0; }
+.soup { border-top: 4px solid #b45309; }
+.main { border-top: 4px solid #155b90; }
 pre { white-space: pre-wrap; overflow-wrap: anywhere; }
-:focus-visible { outline: 3px solid #1769aa; outline-offset: 3px; }
+#status, #storage-status { min-height: 1.6em; }
+/* Mapa potrebuje výšku, inak sa jej podklady nezobrazia. */
+#map { height: 380px; border: 1px solid #8393a4; border-radius: .6rem; }
+table { width: 100%; border-collapse: collapse; background: white; table-layout: fixed; }
+caption { text-align: left; margin-bottom: .5rem; }
+th, td { text-align: left; border: 1px solid #d2dce6; padding: .6rem; }
+thead { background: #e5edf5; }
+dt { margin-top: 1rem; font-weight: 700; }
+dd { margin-left: 0; }
+footer { border-top: 1px solid #d2dce6; margin-top: 2rem; }
+/* Fokus musí zostať viditeľný pri ovládaní klávesom Tab. */
+:focus-visible { outline: 3px solid #b45309; outline-offset: 3px; }
 [hidden] { display: none !important; }
-/* TODO: Podľa zadania doplň vzhľad, triedy a responzivitu. */
+/* Pod 768 px sú karty pod sebou, vrátane telefónu so šírkou 360 px. */
+@media (max-width: 767px) {
+  body { margin: 1rem auto; }
+  .cards { grid-template-columns: 1fr; }
+  th, td { padding: .35rem; }
+}

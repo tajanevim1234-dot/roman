@@ -1,18 +1,26 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cache a opakované načítanie – precvičenie</title>
+  <title>Cache a opakované načítanie</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main>
-    <h1>Cache a opakované načítanie</h1>
-    <p>Rozpracované cvičenie: otvor ZADANIE.md a doplň TODO v script.js.</p>
-    <button id="load">Načítať</button><button id="refresh">Vynútiť načítanie</button>
-<p id="status" role="status"></p><pre id="output"></pre>
+    <p class="eyebrow">Cvičenie 11 · Fetch a localStorage</p>
+    <h1>Menu uložené na dnes</h1>
+    <p>Bežné načítanie použije dnešnú cache. Vynútené načítanie vždy požiada o nové dáta.</p>
+    <!-- Obe tlačidlá volajú rovnakú funkciu s inou hodnotou force. -->
+    <div class="actions">
+      <button id="load" type="button">Načítať</button>
+      <button id="refresh" type="button">Vynútiť načítanie</button>
+    </div>
+    <p id="status" role="status">Načítaj menu a potom porovnaj obe tlačidlá v karte Network.</p>
+    <h2>Načítané dáta</h2>
+    <!-- pre zachová odsadenie JSON; textContent nevykonáva HTML. -->
+    <pre id="output">Zatiaľ nie sú načítané žiadne dáta.</pre>
   </main>
 </body>
 </html>

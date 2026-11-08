@@ -1,5 +1,9 @@
 # 12. Mapa a udalosti knižnice (30 min, rozšírenie)
 
+## Doplnené riešenie
+
+Tento priečinok už obsahuje samostatnú funkčnú stránku s Leafletom. Otvor `index.html` cez Live Server; knižnica a mapové podklady potrebujú internet. Riešenie vychádza z pôvodného `html/js/map.js`, obsahuje aj ukladanie bodov a bonusovú vzdialenosť od školy. Nasledujúce pokyny opisujú pôvodný postup zadania; pre spustenie tohto riešenia už netreba kopírovať pôvodný projekt.
+
 Podľa: `initializeMap` v `html/js/map.js`. Použi pracovnú kópiu projektu s už pripojeným Leafletom.
 
 - Kliknutie na mapu zapíše súradnice do formulára na šesť desatinných miest.

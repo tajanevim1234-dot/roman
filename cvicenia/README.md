@@ -1,10 +1,10 @@
 # Cvičenia – zadania a rozpracovaný kód
 
-Každý priečinok obsahuje `ZADANIE.md`, `index.html`, `style.css` a `script.js`. Funkcie sú zámerne nedokončené: hľadaj `TODO`. Nie sú tu hotové riešenia.
+Každý priečinok obsahuje `ZADANIE.md`, `index.html`, `style.css` a `script.js` (v cvičení 15 sa skript volá `app.js`). Cvičenia 1–10 obsahujú tvoje doterajšie riešenia. Cvičenia 11–15 sú dokončené a majú vysvetľujúce komentáre v JavaScripte, HTML aj CSS.
 
 Vo VS Code otvor tento priečinok a konkrétne HTML spusti cez Live Server. Alternatíva: v priečinku `hmtl-zapocet` spusti `python -m http.server 8000` a otvor `http://localhost:8000/cvicenia/`. Fetch potrebuje HTTP server. Väčšina ostatných príkladov sa dá otvoriť aj dvojklikom.
 
-Na zápočte si podľa témy otvor príslušný priečinok, prečítaj zadanie a prispôsob HTML selektory, vstupné dáta a TODO logiku. Pripravené stránky ešte požadované správanie nevykonávajú.
+Pri precvičovaní si podľa témy otvor príslušný priečinok, prečítaj zadanie a sleduj tok od udalosti cez zmenu dát až po vykreslenie. Hotové riešenia 11–15 si môžeš porovnať s kontrolnými príkladmi v zadaní.
 
 | Priečinok | Čo tu hľadať |
 | --- | --- |
@@ -24,6 +24,6 @@ Na zápočte si podľa témy otvor príslušný priečinok, prečítaj zadanie a
 | [14-html-css](14-html-css/ZADANIE.md) | HTML a CSS |
 | [15-skusobny-zapocet](15-skusobny-zapocet/ZADANIE.md) | Súhrnný test na 75 minút |
 
-Úlohy 01–10 a 13 majú pripravené HTML. Úloha 06 nadväzuje na tvoje riešenie 05. Úloha 11 má vlastné tréningové JSON dáta. Úloha 12 sa dopĺňa v kópii pôvodného projektu s mapou. Úlohy 14 a 15 nechávajú tvorbu HTML na teba.
+Úloha 06 nadväzuje na tvoje riešenie 05. Úloha 11 má vlastné tréningové JSON dáta. Úloha 12 teraz funguje samostatne: pripája Leaflet a používa výpočet vzdialenosti z pôvodného projektu. Úloha 14 obsahuje aj vysvetlenie relatívnych ciest, `defer`, `id` a `class`. Úloha 15 spája načítanie, filtre, formulár, mazanie a ukladanie menu.
 
 Pôvodné súhrnné zadania aj nápovedy zostávajú o priečinok vyššie.

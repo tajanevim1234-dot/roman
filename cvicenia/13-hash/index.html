@@ -1,19 +1,32 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Navigácia cez hash – precvičenie</title>
+  <title>Navigácia cez hash</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main>
+    <p class="eyebrow">Cvičenie 13 · Navigácia</p>
     <h1>Navigácia cez hash</h1>
-    <p>Rozpracované cvičenie: otvor ZADANIE.md a doplň TODO v script.js.</p>
-    <nav><a href="#menu">Menu</a> <a href="#o-projekte">O projekte</a></nav>
-<section id="menu"><h2>Menu</h2><p>Ponuka jedál.</p></section>
-<section id="o-projekte" hidden><h2>O projekte</h2><p>Informácie o stránke.</p></section>
+    <p>Prepni sekciu a vyskúšaj tlačidlá Späť a Dopredu v prehliadači.</p>
+    <!-- Bežné odkazy menia hash aj históriu bez vlastnej obsluhy click. -->
+    <nav aria-label="Sekcie stránky">
+      <a href="#menu">Menu</a>
+      <a href="#o-projekte">O projekte</a>
+    </nav>
+    <section id="menu">
+      <h2>Menu</h2>
+      <article><h3>Paradajková polievka</h3><p>Polievka · 2,50 €</p></article>
+      <article><h3>Kurací rezeň</h3><p>Hlavné jedlo · 6,90 €</p></article>
+    </section>
+    <section id="o-projekte" hidden>
+      <h2>O projekte</h2>
+      <p>Jednoduché prepínanie sekcií pomocou location.hash a udalosti hashchange.</p>
+      <p>JavaScript upraví viditeľnosť, názov karty aj označenie aktívneho odkazu.</p>
+    </section>
   </main>
 </body>
 </html>

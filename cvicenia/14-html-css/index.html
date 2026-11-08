@@ -1,18 +1,71 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML a CSS – precvičenie</title>
+  <title>Študentský rozvrh – HTML a CSS</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Sémantické prvky pomenúvajú význam jednotlivých častí stránky. -->
+  <header>
+    <p class="eyebrow">Cvičenie 14 · HTML a CSS</p>
+    <h1>Môj študentský týždeň</h1>
+    <p>Predmety, rozvrh a jednoduchý formulár na jednom mieste.</p>
+  </header>
+  <nav aria-label="Navigácia na stránke">
+    <a href="#predmety">Predmety</a>
+    <a href="#rozvrh">Rozvrh</a>
+    <a href="#formular">Formulár</a>
+    <a href="#vysvetlenie">Vysvetlenie</a>
+  </nav>
   <main>
-    <h1>HTML a CSS</h1>
-    <p>Rozpracované cvičenie: otvor ZADANIE.md a doplň TODO v script.js.</p>
-    <!-- TODO: Vytvor sémantickú štruktúru, navigáciu, formulár, tabuľku a tri karty.
-V tomto cvičení uprav aj obal dokumentu a pridaj footer. -->
+    <section id="predmety">
+      <h2>Moje predmety</h2>
+      <!-- Spoločná class upravuje všetky karty; id označuje jednu konkrétnu sekciu. -->
+      <div class="cards">
+        <article><h3>Matematika</h3><p>Precvičenie výpočtov a logického myslenia.</p></article>
+        <article><h3>Programovanie</h3><p>Polia, funkcie a riešenie praktických úloh.</p></article>
+        <article><h3>Webové technológie</h3><p>Štruktúra HTML, vzhľad CSS a udalosti v JavaScripte.</p></article>
+      </div>
+    </section>
+    <section id="rozvrh">
+      <h2>Týždenný rozvrh</h2>
+      <!-- caption pomenúva tabuľku, scope prepája hlavičky so stĺpcami. -->
+      <table>
+        <caption>Ukážkové vyučovanie</caption>
+        <thead><tr><th scope="col">Deň</th><th scope="col">Čas</th><th scope="col">Predmet</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Pondelok</th><td>8:00–10:00</td><td>Matematika</td></tr>
+          <tr><th scope="row">Pondelok</th><td>10:00–12:00</td><td>Programovanie</td></tr>
+          <tr><th scope="row">Streda</th><td>8:00–10:00</td><td>Webové technológie</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section id="formular">
+      <h2>Prihlásenie na konzultáciu</h2>
+      <p>Ukážkový formulár precvičuje HTML validáciu. Údaje sa nikam neukladajú.</p>
+      <!-- GET odošle ukážkové hodnoty do adresy tejto stránky, bez serverového spracovania. -->
+      <form action="#formular" method="get">
+        <label for="student-name">Meno</label>
+        <input id="student-name" name="name" autocomplete="given-name" required>
+        <label for="student-email">E-mail</label>
+        <input id="student-email" name="email" type="email" autocomplete="email" required>
+        <button type="submit">Vyskúšať formulár</button>
+      </form>
+    </section>
+    <section id="vysvetlenie">
+      <h2>Čo si zapamätať</h2>
+      <dl>
+        <dt>Relatívna cesta <code>../js/nav.js</code></dt>
+        <dd><code>..</code> ide o priečinok vyššie, potom do <code>js</code> a načíta súbor <code>nav.js</code>.</dd>
+        <dt>Atribút <code>defer</code></dt>
+        <dd>Externý skript sa sťahuje počas spracovania HTML, ale vykoná sa až po jeho spracovaní. Skripty s defer zachovajú poradie.</dd>
+        <dt><code>id</code> a <code>class</code></dt>
+        <dd><code>id</code> je jedinečný identifikátor prvku (CSS: <code>#rozvrh</code>). Rovnakú <code>class</code> môže mať viac prvkov (CSS: <code>.cards</code>).</dd>
+      </dl>
+    </section>
   </main>
+  <footer><p>Príprava na zápočet · HTML a CSS · 2026</p></footer>
 </body>
 </html>

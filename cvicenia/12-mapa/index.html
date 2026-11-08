@@ -1,17 +1,39 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mapa – doplnenie projektu – precvičenie</title>
+  <title>Mapa a uložené body</title>
+  <!-- Leaflet musí byť načítaný pred naším script.js. defer zachová poradie. -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <main>
-    <h1>Mapa – doplnenie projektu</h1>
-    <p>Rozpracované cvičenie: otvor ZADANIE.md a doplň TODO v script.js.</p>
-    <p>Túto úlohu dokonči v pracovnej kópii pôvodného projektu html. Postup je v ZADANIE.md.</p>
+    <p class="eyebrow">Cvičenie 12 · Leaflet a udalosti</p>
+    <h1>Moje miesta na mape</h1>
+    <p>Klikni na mapu, pomenuj miesto a ulož ho. Oranžový kruh je dočasný náhľad.</p>
+    <p id="status" role="status">Načítavam mapu…</p>
+    <div id="map" role="region" aria-label="Mapa s uloženými bodmi"></div>
+    <!-- Ručné zadanie súradníc umožňuje pridať bod aj bez použitia myši. -->
+    <form id="point-form">
+      <fieldset id="point-fields" disabled>
+        <legend>Nový bod</legend>
+        <label for="point-name">Názov miesta (2–60 znakov)</label>
+        <input id="point-name" name="name" minlength="2" maxlength="60" required>
+        <label for="point-latitude">Zemepisná šírka</label>
+        <input id="point-latitude" name="latitude" type="number" min="-90" max="90" step="any" required>
+        <label for="point-longitude">Zemepisná dĺžka</label>
+        <input id="point-longitude" name="longitude" type="number" min="-180" max="180" step="any" required>
+        <button type="submit">Pridať bod</button>
+      </fieldset>
+    </form>
+    <p id="storage-status" role="status"></p>
+    <h2>Uložené miesta</h2>
+    <div id="results" class="cards"></div>
+    <noscript>Na ovládanie mapy potrebuješ zapnutý JavaScript.</noscript>
   </main>
 </body>
 </html>
